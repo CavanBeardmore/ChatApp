@@ -1,0 +1,86 @@
+# -----------------------------
+# ASP.NET / .NET
+# -----------------------------
+bin/
+obj/
+out/
+*.exe
+*.dll
+*.pdb
+*.db
+*.log
+*.cache
+*.tmp
+*.user
+*.suo
+*.userosscache
+*.sln.docstates
+
+# Visual Studio
+.vs/
+*.userprefs
+
+# ASP.NET publish outputs
+wwwroot/
+appsettings.*.json
+launchSettings.json
+
+# Rider / ReSharper
+.idea/
+*.DotSettings.user
+
+# -----------------------------
+# React (TypeScript Frontend)
+# -----------------------------
+# Assuming frontend is in "client" folder
+client/node_modules/
+client/dist/
+client/build/
+client/.vite/
+client/.next/
+client/.turbo/
+client/.cache/
+
+# TypeScript
+*.tsbuildinfo
+
+# Environment files
+client/.env
+client/.env.local
+client/.env.*.local
+
+# Dependency logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# Editor settings
+*.swp
+*.swo
+*.orig
+.DS_Store
+Thumbs.db
+
+# -----------------------------
+# OS-specific
+# -----------------------------
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+ehthumbs.db
+Thumbs.db
+Desktop.ini
+
+# Linux
+*~
+
+# -----------------------------
+# Misc
+# -----------------------------
+.env
+.env.*
+logs/
