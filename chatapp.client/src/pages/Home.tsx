@@ -26,11 +26,11 @@ export const Home = () => {
     return (
         <div className='flex flex-col space-y-6 text-green-500 w-full'>
             <p className='text-green-500'>Enter a username and choose a chat option.</p>
-            <input placeholder="Username" value={username || ""} onChange={handleUsernameInput} />
-            <button disabled={isUsernameNull} onClick={onHostClicked}>
+            <input className="bg-[#1a1a1a]" placeholder="Username" value={username || ""} onChange={handleUsernameInput} />
+            <button disabled={isUsernameNull} onClick={onHostClicked} className="bg-[#1a1a1a]">
                 Host a chat.
             </button>
-            <button disabled={isUsernameNull} onClick={onClientClicked}>
+            <button disabled={isUsernameNull} onClick={onClientClicked} className="bg-[#1a1a1a]">
                 Join a chat.
             </button>
         </div>

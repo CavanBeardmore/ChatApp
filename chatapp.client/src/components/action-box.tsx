@@ -14,19 +14,19 @@ export const ActionBox = ({
 
     const generateText = (): string => {
         if (type === ActionType.JOINED) {
-            `You joined the chat at ${timestamp}`
+            `You have joined the chat at - ${timestamp}`
         }
 
         return `
-            ${username} ${type === ActionType.JOIN ? "joined" : "left"} at ${timestamp}
+            ${username} has ${type === ActionType.JOIN ? "joined" : "left"} the chat at ${timestamp}
         `;
     }
 
     return (
         <div
-            className="bg-[#1a1a1a] flex flex-col text-left p-4 rounded-lg space-y-6"
+            className="bg-[#1a1a1a] flex flex-col text-center p-4 rounded-lg border-1 border-s-green-500"
         >
-            <p className="text-xs font-semibold">
+            <p>
                 {generateText()}
             </p>
         </div>

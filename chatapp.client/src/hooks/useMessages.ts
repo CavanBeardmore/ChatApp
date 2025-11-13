@@ -1,7 +1,7 @@
 import { Resolve } from "@here-mobility/micro-di";
 import { Events, type GlobalEventObserver } from "../classes/Events/GlobalEventObserver";
 import { useState } from "react";
-import { Action } from "../Data/Action";
+import { Action, ActionType } from "../Data/Action";
 import { Message } from "../Data/Message";
 
 interface useMessagesReturn {

@@ -6,10 +6,17 @@ import { Client } from './pages/Client';
 import { useEffect } from 'react';
 import { Resolve } from '@here-mobility/micro-di';
 import type { IServerEventHandler } from './classes/Events/IServerEventHandler';
+import { ToastContainer } from 'react-toastify';
+import { useToastErrors } from './hooks/useToastErrors';
 
 
 export const App = () => {
     const serverEventHandler = Resolve<IServerEventHandler>("ServerEventHandler");
+
+    const {
+        registerEvents,
+        removeEvents
+    } = useToastErrors();
 
     const startConnection = async () => {
         await serverEventHandler.CreateConnection();
@@ -21,9 +28,11 @@ export const App = () => {
 
     useEffect(() => {
         startConnection();
+        registerEvents();
 
         return () => {
             closeConnection();
+            removeEvents();
         }
     }, []);
 
@@ -36,6 +45,7 @@ export const App = () => {
                     <Route path="/client" element={<Client />}/>
                 </Routes>
             </BrowserRouter>
+            <ToastContainer />
         </div>
     );
 }

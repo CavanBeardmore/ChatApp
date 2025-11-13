@@ -37,12 +37,12 @@ export const useHostService = (uname: string): useHostServiceReturn => {
 
     const sendMessage = async (message: string): Promise<void> => {
         const username = hostUsername.current;
-        const [success, sentMessage] = await hostService.SendMessage(username, message);
+        const {success, data} = await hostService.SendMessage(username, message);
 
         if (!success) {
             events.raise(Events.SEND_MESSAGE_ERROR);
         } else {
-            events.raise(Events.SENT_MESSAGE, sentMessage)
+            events.raise(Events.SENT_MESSAGE, data)
         }
     };
 
