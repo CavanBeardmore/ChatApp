@@ -23,7 +23,6 @@ out/
 # ASP.NET publish outputs
 wwwroot/
 appsettings.*.json
-launchSettings.json
 
 # Rider / ReSharper
 .idea/
